@@ -259,31 +259,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: xRange
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: yRange
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: controlSpeed
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: controlRollFactor
-      value: -7.5
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: positionYawFactor
-      value: -2.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: controlPitchFactor
-      value: 7.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1520344442, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: positionPitchFactor
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1510364872509504, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_Name
