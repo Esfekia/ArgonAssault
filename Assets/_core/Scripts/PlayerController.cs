@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction fire;
     [SerializeField] float controlSpeed = 0.25f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
@@ -28,11 +29,13 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
+        fire.Enable();
     }
 
     private void OnDisable()
     {
         movement.Disable();
+        fire.Disable();
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
 
     }
 
@@ -81,5 +85,13 @@ public class PlayerController : MonoBehaviour
         float roll = rollDueToControl;
         
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    void ProcessFiring(){
+        // Use new input system to print "firing" when space is pressed
+        if (fire.ReadValue<float>() > 0.5f){
+            Debug.Log("Firing");
+        } 
+
     }
 }
