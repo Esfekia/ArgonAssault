@@ -521,6 +521,18 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 7047538487401393124}
+    - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 7047538487401393123}
+    - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
       propertyPath: fire.m_SingletonActionBindings.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -589,3 +601,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9559946699e236248a21c6058c219471, type: 3}
+--- !u!1 &7047538487401393123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6387360899031153734, guid: 9559946699e236248a21c6058c219471, type: 3}
+  m_PrefabInstance: {fileID: 7047538487401393122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7047538487401393124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6280278424571323980, guid: 9559946699e236248a21c6058c219471, type: 3}
+  m_PrefabInstance: {fileID: 7047538487401393122}
+  m_PrefabAsset: {fileID: 0}

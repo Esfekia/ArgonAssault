@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlSpeed = 0.25f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
+    
+    [SerializeField] GameObject[] lasers;
 
     [SerializeField] float positionPitchFactor = 2.5f;
     [SerializeField] float positionYawFactor = -2.5f;
@@ -90,8 +92,23 @@ public class PlayerController : MonoBehaviour
     void ProcessFiring(){
         // Use new input system to print "firing" when space is pressed
         if (fire.ReadValue<float>() > 0.5f){
-            Debug.Log("Firing");
-        } 
+            ActivateLasers();
+        }
+        else
+        {            
+            DeactivateLasers();
+        }
 
+    }    
+    void ActivateLasers(){
+        foreach (GameObject laser in lasers){
+            laser.SetActive(true);
+        }
+    }
+
+    void DeactivateLasers(){
+        foreach (GameObject laser in lasers){
+            laser.SetActive(false);
+        }
     }
 }
