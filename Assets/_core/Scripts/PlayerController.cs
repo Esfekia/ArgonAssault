@@ -5,14 +5,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Input System Bindings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction fire;
+    [Header("General Setup Settings")]
+    [Tooltip("How fast ship moves up and down based upon player input.")] 
     [SerializeField] float controlSpeed = 0.25f;
     [SerializeField] float xRange = 10f;
     [SerializeField] float yRange = 7f;
-    
-    [SerializeField] GameObject[] lasers;
+    [Header("Laser Gun Array")]
+    [Tooltip("Add all player lasers here.")][SerializeField] GameObject[] lasers;
 
+    [Header("Screen Position Based Tuning")]
     [SerializeField] float positionPitchFactor = 2.5f;
     [SerializeField] float positionYawFactor = -2.5f;
 
@@ -92,23 +96,20 @@ public class PlayerController : MonoBehaviour
     void ProcessFiring(){
         // Use new input system to print "firing" when space is pressed
         if (fire.ReadValue<float>() > 0.5f){
-            ActivateLasers();
+            SetLasersActive(true);
         }
         else
-        {            
-            DeactivateLasers();
+        {
+            SetLasersActive(false);
         }
-
-    }    
-    void ActivateLasers(){
-        foreach (GameObject laser in lasers){
-            laser.SetActive(true);
-        }
+        
     }
-
-    void DeactivateLasers(){
-        foreach (GameObject laser in lasers){
-            laser.SetActive(false);
+    void SetLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 }
