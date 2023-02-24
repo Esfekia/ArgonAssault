@@ -1333,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
       propertyPath: controlSpeed
-      value: 0.03
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 7047538487794142443, guid: 9559946699e236248a21c6058c219471, type: 3}
       propertyPath: lasers.Array.size
