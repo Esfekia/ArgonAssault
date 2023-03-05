@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    [SerializeField] ParticleSystem particlesToPlay;
+    
     [SerializeField] float loadDelay = 1f;
-    public bool isTransitioning = false;
+    [SerializeField] bool isTransitioning = false;
     // Class to print out what the player object has collided with.
 
     void OnTriggerEnter(Collider other)
@@ -18,7 +20,10 @@ public class CollisionHandler : MonoBehaviour
     {
         isTransitioning = true;
         GetComponent<PlayerController>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         Invoke("ReloadLevel", loadDelay);
+        particlesToPlay.Play();
     }
 
     void ReloadLevel()
