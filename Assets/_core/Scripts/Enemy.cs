@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] Transform parent;
     [SerializeField] GameObject deathVFX;
     private void OnParticleCollision(GameObject other)
     {
-        Instantiate(deathVFX, transform.position, Quaternion.identity);
+        GameObject vfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        vfx.transform.parent = parent;
         Destroy(gameObject);
     }
 }
