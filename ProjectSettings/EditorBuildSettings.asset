@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_core/Scenes/AlienPlanet.unity
+    guid: 21818f574825e6d43ab352a308fbd236
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 626f6e7384b2bed439ad9a036e424ee0, type: 2}
