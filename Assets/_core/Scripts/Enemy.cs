@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform parent;
+    
     [SerializeField] GameObject hitVFX;
     [SerializeField] GameObject deathVFX;
     [SerializeField] int scorePerHit = 10;
     [SerializeField] int damagePerHit = 10;
     [SerializeField] int enemyHealth = 30;
     ScoreBoard scoreBoard;
+    GameObject parentGameObject;
 
 
     private void Start()
     {
+        parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
         scoreBoard = FindObjectOfType<ScoreBoard>();
         AddRigidBody();
     }
@@ -33,7 +35,7 @@ public class Enemy : MonoBehaviour
     
     void ProcessHit(){
         GameObject hitVfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
-        hitVfx.transform.parent = parent;
+        hitVfx.transform.parent = parentGameObject.transform;
         scoreBoard.IncreaseScore(scorePerHit);
         enemyHealth -= damagePerHit;
         if (enemyHealth < 1)
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
     
     void KillEnemy(){
         GameObject deathVfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
-        deathVfx.transform.parent = parent;
+        deathVfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
     }
 }
