@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     void ProcessHit(){
         GameObject hitVfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
         hitVfx.transform.parent = parentGameObject.transform;
-        scoreBoard.IncreaseScore(scorePerHit);
+        
         enemyHealth -= damagePerHit;
         if (enemyHealth < 1)
         {
@@ -45,6 +45,7 @@ public class Enemy : MonoBehaviour
     }
     
     void KillEnemy(){
+        scoreBoard.IncreaseScore(scorePerHit);
         GameObject deathVfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         deathVfx.transform.parent = parentGameObject.transform;
         Destroy(gameObject);
