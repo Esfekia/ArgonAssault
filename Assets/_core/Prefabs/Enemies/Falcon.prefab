@@ -1131,6 +1131,7 @@ GameObject:
   - component: {fileID: 7112981527638870649}
   - component: {fileID: 7103213939018934349}
   - component: {fileID: 1856142393381836183}
+  - component: {fileID: 5960644880018284237}
   m_Layer: 0
   m_Name: Falcon
   m_TagString: Untagged
@@ -1216,12 +1217,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245980802755d74c9917dc1002cf541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
   hitVFX: {fileID: 1497215072318707860, guid: bc020b8468c779949add23d768b2a382, type: 3}
-  deathVFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
+  deathFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
   scorePerHit: 15
   damagePerHit: 10
   enemyHealth: 30
+--- !u!65 &5960644880018284237
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7117099028500456217}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.865558, y: 4.241986, z: 11.309124}
+  m_Center: {x: 0.00000047683716, y: -0.000006198883, z: -0.0000011920929}
 --- !u!1 &7354215689133864559
 GameObject:
   m_ObjectHideFlags: 0

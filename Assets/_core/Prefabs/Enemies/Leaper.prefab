@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 1030175357642762064}
   - component: {fileID: 3003650599737136026}
   - component: {fileID: 1145474442}
+  - component: {fileID: 6769518016197444968}
   m_Layer: 0
   m_Name: Leaper
   m_TagString: Untagged
@@ -681,12 +682,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245980802755d74c9917dc1002cf541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
   hitVFX: {fileID: 1497215072318707860, guid: bc020b8468c779949add23d768b2a382, type: 3}
-  deathVFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
+  deathFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
   scorePerHit: 15
   damagePerHit: 10
   enemyHealth: 50
+--- !u!65 &6769518016197444968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652384380855726671}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.3756166, y: 2.873394, z: 10.557743}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4182879537238404899
 GameObject:
   m_ObjectHideFlags: 0

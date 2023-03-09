@@ -489,6 +489,7 @@ GameObject:
   - component: {fileID: 4626242550072949440}
   - component: {fileID: 4618408656564502148}
   - component: {fileID: 5159766632604291162}
+  - component: {fileID: -2778332987015155799}
   m_Layer: 0
   m_Name: Condor
   m_TagString: Untagged
@@ -574,12 +575,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2245980802755d74c9917dc1002cf541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
   hitVFX: {fileID: 1497215072318707860, guid: bc020b8468c779949add23d768b2a382, type: 3}
-  deathVFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
+  deathFX: {fileID: 5101165800146152363, guid: e916db773d370e34d88472f837d14660, type: 3}
   scorePerHit: 10
   damagePerHit: 10
   enemyHealth: 40
+--- !u!65 &-2778332987015155799
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4630743924718449590}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 11.115113, y: 2.7828712, z: 10.850533}
+  m_Center: {x: 0, y: -0.000013887882, z: 0.0000026226044}
 --- !u!1 &4960934113865120433
 GameObject:
   m_ObjectHideFlags: 0
