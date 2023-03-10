@@ -22,7 +22,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float controlRollFactor = -7.5f;
     [SerializeField] float controlPitchFactor = 7.5f;
-       
+
+    [Header("Sound Effects for Lasers")]
+    [SerializeField] GameObject laserSound;
 
     float horizontalThrow;
     float verticalThrow;
@@ -97,17 +99,20 @@ public class PlayerController : MonoBehaviour
     void ProcessFiring(){
         // Use new input system to print "firing" when space is pressed
         if (fire.ReadValue<float>() > 0.5f){
-            SetLasersActive(true);            
+            SetLasersActive(true);
+            laserSound.SetActive(true);
 
         }
         else
         {
             SetLasersActive(false);
+            laserSound.SetActive(false);
         }
         
     }
     void SetLasersActive(bool isActive)
     {
+        
         foreach (GameObject laser in lasers)
         {
             var emissionModule = laser.GetComponent<ParticleSystem>().emission;
